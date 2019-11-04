@@ -2,11 +2,9 @@
 // Licensed under the MIT License.
 
 using System;
-using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Azure.Core.Pipeline;
-using Azure.Core.Pipeline.Policies;
 using Azure.Core.Testing;
 using NUnit.Framework;
 
@@ -73,6 +71,13 @@ namespace Azure.Core.Tests
             {
                 DiagnosticsOptions.DefaultApplicationId = null;
             }
+        }
+
+        [Test]
+        public void ApplicationIdLimitedTo24Chars()
+        {
+            var options = new DiagnosticsOptions();
+            Assert.Throws<ArgumentOutOfRangeException>(() => options.ApplicationId = "0123456789012345678912345");
         }
 
         private class TestOptions : ClientOptions

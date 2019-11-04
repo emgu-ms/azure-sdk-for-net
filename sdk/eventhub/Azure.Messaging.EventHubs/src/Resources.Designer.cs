@@ -22,7 +22,6 @@ namespace Azure.Messaging.EventHubs
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources
     {
-
         private static global::System.Resources.ResourceManager resourceMan;
 
         private static global::System.Globalization.CultureInfo resourceCulture;
@@ -67,68 +66,90 @@ namespace Azure.Messaging.EventHubs
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to The message (id:{0}, size:{1} bytes) is larger than is currently allowed ({2} bytes)..
+        ///   Looks up a localized string similar to The {0} value is expected to be a {1} bit signed integer. Actual value: &apos;{2}&apos;..
         /// </summary>
-        internal static string MessageSizeExceeded 
-        {
-            get 
-            {
-                return ResourceManager.GetString("MessageSizeExceeded", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to The argument &apos;{0}&apos; may not be null or empty..
-        /// </summary>
-        internal static string ArgumentNullOrEmpty
+        internal static string CannotParseIntegerType
         {
             get
             {
-                return ResourceManager.GetString("ArgumentNullOrEmpty", resourceCulture);
+                return ResourceManager.GetString("CannotParseIntegerType", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to The argument &apos;{0}&apos; may not be null or white space..
-        /// </summary>
-        internal static string ArgumentNullOrWhiteSpace
-        {
-            get
-            {
-                return ResourceManager.GetString("ArgumentNullOrWhiteSpace", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to The argument &apos;{0}&apos; may not be empty or white space, though it may be null.
-        /// </summary>
-        internal static string ArgumentEmptyOrWhiteSpace
-        {
-            get
-            {
-                return ResourceManager.GetString("ArgumentEmptyOrWhiteSpace", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to The argument &apos;{0}&apos; cannot exceed {1} characters..
-        /// </summary>
-        internal static string ArgumentStringTooLong
-        {
-            get
-            {
-                return ResourceManager.GetString("ArgumentStringTooLong", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to A producer created for a specific partition cannot send events using a partition key.  This producer is associated with partition &apos;{0}&apos;..
+        ///   Looks up a localized string similar to A producer created for a specific partition cannot send events using a partition key. This producer is associated with partition &apos;{0}&apos;..
         /// </summary>
         internal static string CannotSendWithPartitionIdAndPartitionKey
         {
             get
             {
                 return ResourceManager.GetString("CannotSendWithPartitionIdAndPartitionKey", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot begin processing without {0} handler set..
+        /// </summary>
+        internal static string CannotStartEventProcessorWithoutHandler
+        {
+            get
+            {
+                return ResourceManager.GetString("CannotStartEventProcessorWithoutHandler", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to The &apos;identifier&apos; parameter exceeds the maximum allowed size of {0} characters..
+        /// </summary>
+        internal static string ConsumerIdentifierOverMaxValue
+        {
+            get
+            {
+                return ResourceManager.GetString("ConsumerIdentifierOverMaxValue", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to acquire an access token using the provided credential..
+        /// </summary>
+        internal static string CouldNotAcquireAccessToken
+        {
+            get
+            {
+                return ResourceManager.GetString("CouldNotAcquireAccessToken", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to {0} has already been disposed and cannot perform the requested operation..
+        /// </summary>
+        internal static string DisposedInstanceCannotPerformOperation
+        {
+            get
+            {
+                return ResourceManager.GetString("DisposedInstanceCannotPerformOperation", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Could not create a subscription for events for Event Hub: &apos;{0}&apos;, partition: &apos;{1}&apos;, consumer group: &apos;{2}&apos;..
+        /// </summary>
+        internal static string FailedToCreateEventSubscription
+        {
+            get
+            {
+                return ResourceManager.GetString("FailedToCreateEventSubscription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Serialization failed due to an unsupported type, {0}..
+        /// </summary>
+        internal static string FailedToSerializeUnsupportedType
+        {
+            get
+            {
+                return ResourceManager.GetString("FailedToSerializeUnsupportedType", resourceCulture);
             }
         }
 
@@ -151,6 +172,17 @@ namespace Azure.Messaging.EventHubs
             get
             {
                 return ResourceManager.GetString("InvalidEncoding", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to An invalid message body was encountered.  Either the body was null or an incorrect type. Expected: {0}.
+        /// </summary>
+        internal static string InvalidMessageBody
+        {
+            get
+            {
+                return ResourceManager.GetString("InvalidMessageBody", resourceCulture);
             }
         }
 
@@ -188,7 +220,18 @@ namespace Azure.Messaging.EventHubs
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to The connection string used for an Event Hub client must specify the Event Hubs namespace host, and a Shared Access Signature (both the name and value) to be valid.  The path to an Event Hub must be included in the connection string or specified separately..
+        ///   Looks up a localized string similar to The message (id:{0}, size:{1} bytes) is larger than is currently allowed ({2} bytes)..
+        /// </summary>
+        internal static string MessageSizeExceeded
+        {
+            get
+            {
+                return ResourceManager.GetString("MessageSizeExceeded", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to The connection string used for an Event Hub client must specify the Event Hubs namespace host, and a Shared Access Signature (both the name and value) to be valid. The path to an Event Hub must be included in the connection string or specified separately..
         /// </summary>
         internal static string MissingConnectionInformation
         {
@@ -199,7 +242,7 @@ namespace Azure.Messaging.EventHubs
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to The path to an Event Hub may be specified as part of the connection string or as a separate value, but not both.
+        ///   Looks up a localized string similar to The path to an Event Hub may be specified as part of the connection string or as a separate value, but not both..
         /// </summary>
         internal static string OnlyOneEventHubNameMayBeSpecified
         {
@@ -210,40 +253,18 @@ namespace Azure.Messaging.EventHubs
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to System property &apos;{0}&apos; is missing in the event..
+        ///   Looks up a localized string similar to A proxy may only be used for a web sockets connection..
         /// </summary>
-        internal static string MissingSystemProperty
+        internal static string ProxyMustUseWebSockets
         {
             get
             {
-                return ResourceManager.GetString("MissingSystemProperty", resourceCulture);
+                return ResourceManager.GetString("ProxyMustUseWebSockets", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to A proxy may only be used for a websockets connection..
-        /// </summary>
-        internal static string ProxyMustUseWebsockets
-        {
-            get
-            {
-                return ResourceManager.GetString("ProxyMustUseWebsockets", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to The &apos;identifier&apos; parameter exceeds the maximum allowed size of {0} characters..
-        /// </summary>
-        internal static string ConsumerIdentifierOverMaxValue
-        {
-            get
-            {
-                return ResourceManager.GetString("ConsumerIdentifierOverMaxValue", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to The reqested resource, &apos;{0}&apos;, does not match the resource of the shared access signature, &apos;{1}&apos;.   A token cannot be issued..
+        ///   Looks up a localized string similar to The requested resource, &apos;{0}&apos;, does not match the resource of the shared access signature, &apos;{1}&apos;. A token cannot be issued..
         /// </summary>
         internal static string ResourceMustMatchSharedAccessSignature
         {
@@ -254,13 +275,24 @@ namespace Azure.Messaging.EventHubs
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to A retry must be set for the options; if no retry is desired, please set the value to Retry.NoRetry.
+        ///   Looks up a localized string similar to Retry options must be specified; if no retry is desired, please set the maximum number of retries to 0. To provide a custom retry policy, please assign it on the client directly..
         /// </summary>
-        internal static string RetryMustBeSet
+        internal static string RetryOptionsMustBeSet
         {
             get
             {
-                return ResourceManager.GetString("RetryMustBeSet", resourceCulture);
+                return ResourceManager.GetString("RetryOptionsMustBeSet", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to The event processor is already running and needs to be stopped in order to perform this operation..
+        /// </summary>
+        internal static string RunningEventProcessorCannotPerformOperation
+        {
+            get
+            {
+                return ResourceManager.GetString("RunningEventProcessorCannotPerformOperation", resourceCulture);
             }
         }
 
@@ -276,7 +308,18 @@ namespace Azure.Messaging.EventHubs
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to A timeout value must be positive.  To request using the default timeout, please use TimeSpan.Zero or null..
+        ///   Looks up a localized string similar to A shared key credential is unable to generate a token directly. Please use this credential when creating an Event Hub Client, for proper generation of shared key tokens..
+        /// </summary>
+        internal static string SharedKeyCredentialCannotGenerateTokens
+        {
+            get
+            {
+                return ResourceManager.GetString("SharedKeyCredentialCannotGenerateTokens", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to A timeout value must be positive. To request using the default timeout, please use TimeSpan.Zero or null..
         /// </summary>
         internal static string TimeoutMustBePositive
         {
@@ -298,6 +341,17 @@ namespace Azure.Messaging.EventHubs
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to An unknown error was encountered while communicating with the Event Hubs service..
+        /// </summary>
+        internal static string UnknownCommunicationException
+        {
+            get
+            {
+                return ResourceManager.GetString("UnknownCommunicationException", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to The specified connection type, &quot;{0}&quot;, is not recognized as valid in this context..
         /// </summary>
         internal static string UnknownConnectionType
@@ -305,6 +359,61 @@ namespace Azure.Messaging.EventHubs
             get
             {
                 return ResourceManager.GetString("UnknownConnectionType", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to The requested retry mode, &apos;{0}&apos;, is not known; a retry delay canot be determined..
+        /// </summary>
+        internal static string UnknownRetryMode
+        {
+            get
+            {
+                return ResourceManager.GetString("UnknownRetryMode", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to An unrecoverable exception was encountered that left the environment in a bad state..
+        /// </summary>
+        internal static string UnrecoverableException
+        {
+            get
+            {
+                return ResourceManager.GetString("UnrecoverableException", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to The credential is not a known and supported credential type. Please use a JWT credential or shared key credential..
+        /// </summary>
+        internal static string UnsupportedCredential
+        {
+            get
+            {
+                return ResourceManager.GetString("UnsupportedCredential", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to The requested transport event type, &apos;{0}&apos;, is not supported by the active transport client..
+        /// </summary>
+        internal static string UnsupportedTransportEventType
+        {
+            get
+            {
+                return ResourceManager.GetString("UnsupportedTransportEventType", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to The value supplied must be greater than or equal to {0}..
+        /// </summary>
+        internal static string ValueMustBeAtLeast
+        {
+            get
+            {
+                return ResourceManager.GetString("ValueMustBeAtLeast", resourceCulture);
             }
         }
 
@@ -320,35 +429,46 @@ namespace Azure.Messaging.EventHubs
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to The credential is not a known and supported credential type.  Please use a JWT credential or shared key credential..
+        ///   Looks up a localized string similar to The event position is not valid for filtering.  It must have an offset, sequence number, or enqueued time available to filter against..
         /// </summary>
-        internal static string UnsupportedCredential
+        internal static string InvalidEventPositionForFilter
         {
             get
             {
-                return ResourceManager.GetString("UnsupportedCredential", resourceCulture);
+                return ResourceManager.GetString("InvalidEventPositionForFilter", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to >A shared key credential is unable to generate a token directly.  Please use this credential when creating an Event Hub Client, for proper generation of shared key tokens..
+        ///   Looks up a localized string similar to Unable to create the items needed to communicate with the Event Hubs service..
         /// </summary>
-        internal static string SharedKeyCredentialCannotGenerateTokens
+        internal static string CouldNotCreateLink
         {
             get
             {
-                return ResourceManager.GetString("SharedKeyCredentialCannotGenerateTokens", resourceCulture);
+                return ResourceManager.GetString("CouldNotCreateLink", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to The {0} value is expected to be a {1} bit signed integer. Actual value: '{2}'..
+        ///   Looks up a localized string similar to {0} has already been closed and cannot perform the requested operation..
         /// </summary>
-        internal static string CannotParseIntegerType
+        internal static string ClosedConnectionCannotPerformOperation
         {
             get
             {
-                return ResourceManager.GetString("CannotParseIntegerType", resourceCulture);
+                return ResourceManager.GetString("ClosedConnectionCannotPerformOperation", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to This information is only available when TrackLastEnqueuedEventInformation is set on the Event Hub consumer options..
+        /// </summary>
+        internal static string TrackLastEnqueuedEventInformationNotSet
+        {
+            get
+            {
+                return ResourceManager.GetString("TrackLastEnqueuedEventInformationNotSet", resourceCulture);
             }
         }
     }

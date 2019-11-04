@@ -1,12 +1,12 @@
-﻿<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
-  <!-- 
-    Identify samples as a test support project to keep the target framework synchronized, since both are 
-    based on a version of netcoreapp. 
-    
+﻿<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--
+    Identify samples as a test support project to keep the target framework synchronized, since both are
+    based on a version of netcoreapp.
+
     Because the common SDK build properties need this value in order to recognize the desired
     target frameworks and related, this needs to be set before the common properties import.
   -->
-  <PropertyGroup Condition="$(MSBuildProjectName.EndsWith('.Samples'))">
+  <PropertyGroup Condition="$(MSBuildProjectName.Contains('.Samples'))">
     <IsTestProject>true</IsTestProject>
     <IsTestSupportProject>true</IsTestSupportProject>
   </PropertyGroup>
@@ -24,10 +24,10 @@
     <!-- Do not inherit implicit dependencies from the engineering system during build or packaging -->
     <ImportDefaultReferences>false</ImportDefaultReferences>
 
-     <!-- Disable the custom analyzer; it is currently in development and based against draft standards. -->
-     <EnableClientSdkAnalyzers>false</EnableClientSdkAnalyzers>
+    <!-- Disable the custom analyzer; it is currently in development and based against draft standards. -->
+    <EnableClientSdkAnalyzers>false</EnableClientSdkAnalyzers>
 
-     <!-- If there was no override specified, assume a project reference to Azure.Core -->
-     <UseProjectReferenceToAzureCore Condition="'$(UseProjectReferenceToAzureCore)' == ''">true</UseProjectReferenceToAzureCore>
+    <!-- If there was no override specified, set the type of reference to use for client libraries from the Azure SDK repository -->
+    <UseProjectReferenceToAzureClients Condition="'$(UseProjectReferenceToAzureClients)' == ''">true</UseProjectReferenceToAzureClients>
   </PropertyGroup>
 </Project>
